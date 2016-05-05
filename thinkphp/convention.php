@@ -88,7 +88,7 @@ return [
     // 域名部署
     'url_domain_deploy'      => false,
     // 域名根，如.thinkphp.cn
-    'url_domain_root'        => '',
+    'url_domain_root'        => '.tp.cn',
     // 是否自动转换URL中的控制器名
     'url_controller_convert' => true,
     // 是否自动转换URL中的操作名

@@ -29,7 +29,7 @@ class Loader
 
     // 自动加载
     public static function autoload($class)
-    {echo $class."<br/>";
+    {
         // 检测命名空间别名
         if (!empty(self::$namespaceAlias)) {
             $namespace = dirname($class);

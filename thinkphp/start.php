@@ -49,7 +49,6 @@ if (isset($mode['alias'])) {
 
 // 注册错误和异常处理机制
 Error::register();
-echo '<br/>exit;';exit;
 // 加载模式配置文件
 if (isset($mode['config'])) {
     is_array($mode['config']) ? Config::set($mode['config']) : Config::load($mode['config']);

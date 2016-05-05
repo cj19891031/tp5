@@ -151,6 +151,7 @@ class Route
                 self::$rules[$type][$rule] = $result;
             }
         }
+        //print_r(self::$rules);exit;
     }
 
     // 路由分组
@@ -371,7 +372,7 @@ class Route
             // URL映射
             return self::parseUrl(self::$map[$url], $depr);
         }
-
+//echo REQUEST_METHOD;print_r(self::$rules);exit;
         // 获取当前请求类型的路由规则
         $rules = self::$rules[REQUEST_METHOD];
 
@@ -385,7 +386,7 @@ class Route
         if ($return) {
             return $return;
         }
-
+//print_r($rules);exit;
         // 路由规则检测
         if (!empty($rules)) {
             foreach ($rules as $rule => $val) {
@@ -444,6 +445,7 @@ class Route
     // 检测URL绑定
     private static function checkUrlBind(&$url, &$rules)
     {
+        //print_r(self::$bind);exit;
         if (!empty(self::$bind['type'])) {
             // 记录绑定信息
             APP_DEBUG && Log::record('[ BIND ] ' . var_export(self::$bind, true), 'info');
